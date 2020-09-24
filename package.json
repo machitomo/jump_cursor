@@ -1,0 +1,55 @@
+{
+	"name": "jump-cursor",
+	"displayName": "cursor_go_half",
+	"description": "smaple code",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.49.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:jump-cursor.do",
+		"onCommand:jump-cursor.confirm",
+		"onCommand:jump-cursor.plus10",
+		"onCommand:jump-cursor.minus10"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "jump-cursor.do",
+				"title": "jump-cursor"
+			},
+			{
+				"command": "jump-cursor.confirm",
+				"title": "jump-cursor : confirm"
+			},
+			{
+				"command": "jump-cursor.plus10",
+				"title": "jump-cursor : +10 word"
+			},
+			{
+				"command": "jump-cursor.minus10",
+				"title": "jump-cursor : -10 word"
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.49.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.0",
+		"@types/node": "^14.0.27",
+		"eslint": "^7.9.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"typescript": "^4.0.2",
+		"vscode-test": "^1.4.0"
+	}
+}
